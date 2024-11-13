@@ -34,7 +34,7 @@ app.use("/teams", teamRoutes);
 
 /**server */
 
-const prot = process.env.PORT || 3000;
-app.listen(prot, () => {
+const prot = Number(process.env.PORT) || 3000;
+app.listen(prot, "0.0.0.0", () => {
   console.log(`server is running on port ${prot}`);
 });
